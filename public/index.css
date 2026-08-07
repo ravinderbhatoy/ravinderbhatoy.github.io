@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #00adb5;
+    --background-color: #222831;
+    --text-color: #eeeeee;
+    --heading-font: "Montserrat", sans-serif;
+    --subheading-font: "Google Sans", sans-serif;
+    --body-font: "Roboto Mono", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    width: 100%;
+    max-width: 48rem;
+    margin-inline: auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+nav {
+    padding: 0 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid var(--primary-color);
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-brand h1 {
+    font-family: var(--body-font);
+    font-weight: 600;
+
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    max-width: 10rem;
+    --scale: 1;
+    --transition-duration: 250ms;
+    scale: var(--scale);
+    transition:
+        scale var(--transition-duration) ease-in-out;
+}
+
+.profile-img:hover {
+    --scale: 1.1;
+}
+
+
+.box {
+    padding: 0 1rem;
+}
+
+.hero {
+    display: flex;
+    gap: 1.5rem;
+    padding-block: 0.75rem;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-icons img {
+    width: 100%;
+    max-width: 2rem;
+}
+
+.social-icons img:hover {
+    animation: jiggle 0.3s infinite;
+    /* fill: var(--primary-color); */
+}
+
+@keyframes jiggle {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-2px, 2px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translate(2px, -2px) রায় rotate(1deg);
+    }
+
+    75% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+}

@@ -9,96 +9,28 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <!-- css -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!--  Google fonts     -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <title>Astro</title>
-    <style is:global>
-      body {
-        font-family: "Google Sans", sans-serif;
-        width: 100%;
-        max-width: 48rem;
-        margin-inline: auto;
-        background-color: #222831;
-        color: #eeeeee;
-      }
-      nav {
-        padding: 0 0.75rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .nav-items {
-        display: flex;
-        gap: 20px;
-      }
-      a {
-        text-decoration: none;
-        color: #eeeeee;
-      }
-      hr {
-        /* hr is still thick , need to fix this         */
-        height: 0;
-        border: none;
-        border-top: 1px solid #00adb5;
-      }
-      .profile-img {
-        width: 100%;
-        height: auto;
-        max-width: 10rem;
-      }
-      .hero {
-        padding: 0.75rem;
-        display: flex;
-        gap: 1.5rem;
-        align-items: center;
-      }
-      .hero p {
-        font-size: 1.2rem;
-        font-family: "Roboto Mono", monospace;
-        font-optical-sizing: auto;
-      }
-      .social-icons {
-        display: flex;
-        gap: 0.75rem;
-      }
-      .social-icons img {
-        width: 100%;
-        max-width: 2rem;
-      }
-      .social-icons img:hover {
-        animation: jiggle 0.3s infinite;
-      }
-      @keyframes jiggle {
-        0% {
-          transform: translate(0, 0) rotate(0deg);
-        }
-        25% {
-          transform: translate(-2px, 2px) rotate(-1deg);
-        }
-        50% {
-          transform: translate(2px, -2px) রায় rotate(1deg);
-        }
-        75% {
-          transform: translate(-1px, -2px) rotate(-1deg);
-        }
-        100% {
-          transform: translate(1px, 2px) rotate(0deg);
-        }
-      }
-    </style>
+    <title>Ravinder</title>
   </head>
   <body>
     <header>
       <nav>
         <div class="nav-brand">
-          <h1>R@vinder</h1>
+          <a href="/">
+            <h1>R@vinder</h1>
+          </a>
         </div>
         <div class="nav-items">
-          <a href="/posts">Posts</a>
+          <a class="zig-zag-1" href="/posts">Posts</a>
           <a href="/about">About</a>
         </div>
       </nav>
