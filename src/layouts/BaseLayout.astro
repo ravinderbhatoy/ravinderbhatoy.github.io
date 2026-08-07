@@ -19,7 +19,7 @@ import { ClientRouter } from "astro:transitions";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
     <title>Ravinder</title>
@@ -37,8 +37,10 @@ import { ClientRouter } from "astro:transitions";
           <a href={`${baseUrl}about`}>About</a>
         </div>
       </nav>
+      <hr />
     </header>
-    <hr />
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>

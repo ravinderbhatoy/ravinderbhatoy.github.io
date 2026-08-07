@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+const { link, title, desc, date } = Astro.props;
+---
+
+<div class="post">
+    <a href={baseUrl + "posts/" + link}>
+        <h3>{title}</h3>
+        <span class="date">
+            <img src="/calender.svg" alt="calender-icon" />
+            {date}</span
+        >
+        <p>{desc}</p>
+    </a>
+</div>

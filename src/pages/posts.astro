@@ -1,9 +1,21 @@
 ---
+import posts from "../data/posts.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PostAstroComponent from "../components/Post.astro";
 ---
 
 <BaseLayout>
     <div class="box">
         <h2>Posts</h2>
+        {
+            posts.map((p) => (
+                <PostAstroComponent
+                    link={p.url}
+                    title={p.title}
+                    desc={p.desc}
+                    date={p.date}
+                />
+            ))
+        }
     </div>
 </BaseLayout>

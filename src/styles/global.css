@@ -2,8 +2,8 @@
     --primary-color: #00adb5;
     --background-color: #222831;
     --text-color: #eeeeee;
-    --heading-font: "Montserrat", sans-serif;
-    --subheading-font: "Google Sans", sans-serif;
+    --heading-font: "Outfit", sans-serif;
+    --subheading-font: "Montserrat", sans-serif;
     --body-font: "Roboto Mono", monospace;
 }
 
@@ -21,10 +21,13 @@ body {
 }
 
 nav {
-    padding: 0 0.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+h1 {
+    margin-block: 0.5rem;
 }
 
 a {
@@ -48,7 +51,7 @@ hr {
 }
 
 .nav-brand h1 {
-    font-family: var(--body-font);
+    font-family: var(--heading-font);
     font-weight: 600;
 }
 
@@ -115,4 +118,52 @@ hr {
     100% {
         transform: translate(1px, 2px) rotate(0deg);
     }
+}
+
+/* Markdown & Content Typography */
+main h2,
+main h3,
+main h4 {
+    font-family: var(--subheading-font);
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+main p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+main ol,
+main ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+main li {
+    margin-bottom: 0.35rem;
+}
+
+main blockquote {
+    border-left: 3px solid var(--primary-color);
+    margin: 1rem 0;
+    padding-left: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.date img {
+    width: 100%;
+    max-width: 1rem;
 }
