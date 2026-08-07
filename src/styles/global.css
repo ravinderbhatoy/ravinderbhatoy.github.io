@@ -18,6 +18,7 @@ body {
     margin-inline: auto;
     background-color: var(--background-color);
     color: var(--text-color);
+    padding-inline: 1rem;
 }
 
 nav {
@@ -94,10 +95,6 @@ hr {
     max-width: 2rem;
 }
 
-.social-icons img:hover {
-    animation: jiggle 0.3s infinite;
-}
-
 @keyframes jiggle {
     0% {
         transform: translate(0, 0) rotate(0deg);
@@ -166,4 +163,25 @@ main blockquote {
 .date img {
     width: 100%;
     max-width: 1rem;
+}
+
+/* Animations */
+/* Skew */
+.hvr-skew {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-skew:hover,
+.hvr-skew:focus,
+.hvr-skew:active {
+    -webkit-transform: skew(-10deg);
+    transform: skew(-10deg);
 }
