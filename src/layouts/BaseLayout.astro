@@ -19,12 +19,14 @@
     <style is:global>
       body {
         font-family: "Google Sans", sans-serif;
+        width: 100%;
         max-width: 48rem;
         margin-inline: auto;
         background-color: #222831;
         color: #eeeeee;
       }
       nav {
+        padding: 0 0.75rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -38,11 +40,15 @@
         color: #eeeeee;
       }
       hr {
-        border: 1px solid #00adb5;
+        /* hr is still thick , need to fix this         */
+        height: 0;
+        border: none;
+        border-top: 1px solid #00adb5;
       }
       .profile-img {
-        height: 30%;
-        width: 30%;
+        width: 100%;
+        height: auto;
+        max-width: 10rem;
       }
       .hero {
         padding: 0.75rem;
@@ -54,6 +60,34 @@
         font-size: 1.2rem;
         font-family: "Roboto Mono", monospace;
         font-optical-sizing: auto;
+      }
+      .social-icons {
+        display: flex;
+        gap: 0.75rem;
+      }
+      .social-icons img {
+        width: 100%;
+        max-width: 2rem;
+      }
+      .social-icons img:hover {
+        animation: jiggle 0.3s infinite;
+      }
+      @keyframes jiggle {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(-2px, 2px) rotate(-1deg);
+        }
+        50% {
+          transform: translate(2px, -2px) রায় rotate(1deg);
+        }
+        75% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        100% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
       }
     </style>
   </head>
