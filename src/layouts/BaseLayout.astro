@@ -1,5 +1,9 @@
 ---
-
+import "../styles/global.css";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+import { ClientRouter } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -9,8 +13,7 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <!-- css -->
-    <link rel="stylesheet" href="/index.css" />
+    <ClientRouter />
 
     <!--  Google fonts     -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,13 +28,13 @@
     <header>
       <nav>
         <div class="nav-brand">
-          <a href="/">
+          <a href={baseUrl}>
             <h1>R@vinder</h1>
           </a>
         </div>
         <div class="nav-items">
-          <a class="zig-zag-1" href="/posts">Posts</a>
-          <a href="/about">About</a>
+          <a href={`${baseUrl}posts`}>Posts</a>
+          <a href={`${baseUrl}about`}>About</a>
         </div>
       </nav>
     </header>

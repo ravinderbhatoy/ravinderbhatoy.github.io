@@ -1,12 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
 ---
 
 <style></style>
 
 <BaseLayout>
     <div class="hero box">
-        <img class="profile-img" src="/profile.png" alt="profile-image" />
+        <img
+            class="profile-img"
+            src={`${baseUrl}profile.png`}
+            alt="profile-image"
+        />
         <div>
             <h2>Hi, I'm Ravinder.</h2>
             <p>
@@ -15,13 +22,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </p>
             <div class="social-icons">
                 <a href="https://leetcode.com/u/zrpZTiWq3S/" target="_blank">
-                    <img src="/leetcode.svg" alt="leetcode-icon" />
+                    <img src={`${baseUrl}leetcode.svg`} alt="leetcode-icon" />
                 </a>
                 <a href="https://github.com/ravinderbhatoy" target="_blank">
-                    <img src="/github.svg" alt="github-icon" />
+                    <img src={`${baseUrl}github.svg`} alt="github-icon" />
                 </a>
-                <a href="mailto:[ravinderd.bhatoy@gmail.com]" target="_blank">
-                    <img src="/mail.svg" alt="mail-icon" />
+                <a href="mailto:ravinderd.bhatoy@gmail.com" target="_blank">
+                    <img src={`${baseUrl}mail.svg`} alt="mail-icon" />
                 </a>
             </div>
         </div>

@@ -50,7 +50,6 @@ hr {
 .nav-brand h1 {
     font-family: var(--body-font);
     font-weight: 600;
-
 }
 
 .profile-img {
@@ -60,14 +59,12 @@ hr {
     --scale: 1;
     --transition-duration: 250ms;
     scale: var(--scale);
-    transition:
-        scale var(--transition-duration) ease-in-out;
+    transition: scale var(--transition-duration) ease-in-out;
 }
 
 .profile-img:hover {
     --scale: 1.1;
 }
-
 
 .box {
     padding: 0 1rem;
@@ -96,7 +93,6 @@ hr {
 
 .social-icons img:hover {
     animation: jiggle 0.3s infinite;
-    /* fill: var(--primary-color); */
 }
 
 @keyframes jiggle {
@@ -109,7 +105,7 @@ hr {
     }
 
     50% {
-        transform: translate(2px, -2px) রায় rotate(1deg);
+        transform: translate(2px, -2px) rotate(1deg);
     }
 
     75% {
