@@ -12,7 +12,6 @@ title: Reads
 5. Give & Take
 6. The Alchemist
 7. Psychology of Money
-8. Don’t Believe Everything You Think
 
 ## In Progress
 
